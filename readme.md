@@ -29,7 +29,7 @@ A Python-based real-time process monitoring dashboard built using `Tkinter` for 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/real-time-process-monitoring-dashboard.git
+   git clone https://github.com/shyam-medh/real-time-process-monitoring-dashboard.git
    cd real-time-process-monitoring-dashboard
    
 2.  Install the required Python libraries:
