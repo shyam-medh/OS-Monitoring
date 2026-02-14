@@ -302,7 +302,7 @@ class ProcessMonitorDashboard:
 
         # Configure tags once (not every update)
         self.tree.tag_configure("running", background="#166534", foreground="#bbf7d0")
-        self.tree.tag_configure("stopped", background="#991b1b", foreground="#fecaca")
+        self.tree.tag_configure("stopped", background="#c2410c", foreground="#ffedd5")
         self.tree.tag_configure("other", background="#854d0e", foreground="#fef08a")
 
         # Batch insert with values
@@ -398,7 +398,15 @@ class ProcessMonitorDashboard:
                 messagebox.showerror("Error", details["error"])
                 self.update_data_once()
             else:
-                messagebox.showinfo("Process Details", f"Start Time: {datetime.fromtimestamp(details['start_time']).strftime('%Y-%m-%d %H:%M:%S')}\nUser: {details['user']}\nThreads: {details['threads']}")
+                start_time_str = "N/A"
+                start_ts = details.get('start_time')
+                if start_ts and start_ts > 1000:
+                    try:
+                        start_time_str = datetime.fromtimestamp(start_ts).strftime('%Y-%m-%d %H:%M:%S')
+                    except Exception:
+                        pass
+                
+                messagebox.showinfo("Process Details", f"Start Time: {start_time_str}\nUser: {details.get('user', 'Unknown')}\nThreads: {details.get('threads', 'Unknown')}")
         except Exception as e:
             messagebox.showerror("Error", f"Failed to fetch process details: {str(e)}")
             self.update_data_once()

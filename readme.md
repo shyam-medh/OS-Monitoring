@@ -33,7 +33,7 @@ A Python-based real-time process monitoring dashboard built using `Tkinter` for 
    cd real-time-process-monitoring-dashboard
    
 2.  Install the required Python libraries:
-    pip install psutil pandas matplotlib
+    pip install -r requirements.txt
 3. Run the application:
     python dashboard.py
 Usage
@@ -42,12 +42,6 @@ Use the search bar to filter processes by name.
 Navigate through the process list using the pagination controls.
 Select a process to view details or terminate it using the respective buttons.
 Monitor CPU and memory usage in real-time through the graphs.
-Screenshots
-Main Dashboard
-<img alt="Main Dashboard" src="https://via.placeholder.com/1200x700?text=Screenshot+Placeholder">
-Process Details
-<img alt="Process Details" src="https://via.placeholder.com/600x400?text=Screenshot+Placeholder">
-Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 License

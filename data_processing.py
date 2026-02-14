@@ -22,7 +22,7 @@ def process_data(raw_data):
     df = pd.DataFrame(raw_data)
     if not df.empty:
         current_time = time.time()
-        df['duration'] = df['start_time'].apply(lambda x: format_duration(current_time - x))
+        df['duration'] = df['start_time'].apply(lambda x: format_duration(current_time - x) if x > 1000 else "N/A")
         df['cpu_percent'] = df['cpu_percent'].round(2)
         df['memory_mb'] = df['memory_mb'].round(2)
         df = df.drop(columns=['start_time'])
