@@ -44,9 +44,6 @@ Select a process to view details or terminate it using the respective buttons.
 Monitor CPU and memory usage in real-time through the graphs.
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
 Acknowledgments
 psutil for process management.
 matplotlib for data visualization.
