@@ -1,5 +1,7 @@
 # Real-Time Process Monitoring Dashboard
 
+![Dashboard Showcase](showcase.png)
+
 A Python-based real-time process monitoring dashboard built using `Tkinter` for the GUI, `psutil` for system process management, and `matplotlib` for visualizing CPU and memory usage over time.
 
 ## Features
